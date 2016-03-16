@@ -1,2 +1,2 @@
 # PHP string builder
-A string builder fpr PHP
+A string builder for PHP
