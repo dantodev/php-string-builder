@@ -2,4 +2,4 @@
 [![License](https://poser.pugx.org/dtkahl/php-string-builder/license)](https://packagist.org/packages/dtkahl/php-string-builder)
 
 # PHP string builder
-A string builder for PHP
+A string builder for PHP.
