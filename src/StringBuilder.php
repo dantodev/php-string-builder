@@ -1,8 +1,8 @@
 <?php namespace Dtkahl\StringBuilder;
 
-abstract class StringBuilder
+class StringBuilder
 {
 
-  //
+
 
 }
