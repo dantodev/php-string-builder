@@ -49,4 +49,9 @@ class StringBuilderTest extends \PHPUnit_Framework_TestCase
     $this->assertEquals($sb->build(), 'a2a3a1');
   }
 
+  public function testFail()
+  {
+    $this->assertFalse(true);
+  }
+
 }
