@@ -21,19 +21,23 @@ class StringBuilder
   /**
    * @param $part
    * @param array $data
+   * @return $this
    */
   public function append($part, array $data = [])
   {
     $this->_string = $this->_string . (empty($data) ? (string) $part : $this->_template((string) $part, $data));
+    return $this;
   }
 
   /**
    * @param $part
    * @param array $data
+   * @return $this
    */
   public function prepend($part, array $data = [])
   {
     $this->_string = (empty($data) ? (string) $part : $this->_template((string) $part, $data)) . $this->_string;
+    return $this;
   }
 
   /**
@@ -48,18 +52,22 @@ class StringBuilder
 
   /**
    * @param $start
+   * @return $this
    */
   public function startWith($start)
   {
     $this->_start = (string) $start;
+    return $this;
   }
 
   /**
    * @param $end
+   * @return $this
    */
   public function endWith($end)
   {
     $this->_end = (string) $end;
+    return $this;
   }
 
   /**
