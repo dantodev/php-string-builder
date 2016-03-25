@@ -86,4 +86,24 @@ class StringBuilder
     return $this->build();
   }
 
+  /**
+   * @param string $part
+   * @param string $find
+   * @param string $replace
+   */
+  public function prependReplace($part, $find, $replace)
+  {
+    $this->prepend(str_replace((string) $find, (string) $replace, (string)$part));
+  }
+
+  /**
+   * @param string $part
+   * @param string $find
+   * @param string $replace
+   */
+  public function appendReplace($part, $find, $replace)
+  {
+    $this->append(str_replace((string) $find, (string) $replace, (string) $part));
+  }
+
 }
