@@ -90,20 +90,22 @@ class StringBuilder
    * @param string $part
    * @param string $find
    * @param string $replace
+   * @return $this
    */
   public function prependReplace($part, $find, $replace)
   {
-    $this->prepend(str_replace((string) $find, (string) $replace, (string)$part));
+    return $this->prepend(str_replace((string) $find, (string) $replace, (string)$part));
   }
 
   /**
    * @param string $part
    * @param string $find
    * @param string $replace
+   * @return $this
    */
   public function appendReplace($part, $find, $replace)
   {
-    $this->append(str_replace((string) $find, (string) $replace, (string) $part));
+    return $this->append(str_replace((string) $find, (string) $replace, (string) $part));
   }
 
 }
