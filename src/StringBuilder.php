@@ -25,7 +25,7 @@ class StringBuilder
    */
   public function append($part, array $data = [])
   {
-    $this->_string = $this->_string . (empty($data) ? (string) $part : $this->_template((string) $part, $data));
+    $this->_string = $this->_string . (empty($data) ? (string) $part : self::template((string) $part, $data));
     return $this;
   }
 
@@ -36,7 +36,7 @@ class StringBuilder
    */
   public function prepend($part, array $data = [])
   {
-    $this->_string = (empty($data) ? (string) $part : $this->_template((string) $part, $data)) . $this->_string;
+    $this->_string = (empty($data) ? (string) $part : self::template((string) $part, $data)) . $this->_string;
     return $this;
   }
 
@@ -45,7 +45,7 @@ class StringBuilder
    * @param array $data
    * @return mixed
    */
-  private function _template($string, array $data)
+  public static function template($string, array $data)
   {
     return call_user_func_array('sprintf', array_merge([$string], $data));
   }
